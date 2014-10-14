@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "OCR webapp in node.js / uses tesseract",
   "main": "tessr.js",
+  "bin": "./tessr.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,7 +20,7 @@
     "processing"
   ],
   "author": "Ruth Hutchins",
-  "license": "Apache 2",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/rdhutchins/tessr/issues"
   },

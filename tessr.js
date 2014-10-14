@@ -1,10 +1,13 @@
+#!/usr/bin/env node
+
+// Requires:
 var express = require('express');
 var routes = require('./routes');
 
-// Use express.
-var app = express();
+// Use express and export it as well.
+var app = module.exports = express();
 
 // Set up routing for express.
-app.get('/', routes.handleIndex);
+app.get('/', routes.index);
 
 app.listen(3000);
