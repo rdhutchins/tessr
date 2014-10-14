@@ -1,0 +1,27 @@
+{
+  "name": "tessr",
+  "version": "1.0.0",
+  "description": "OCR webapp in node.js / uses tesseract",
+  "main": "tessr.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rdhutchins/tessr.git"
+  },
+  "keywords": [
+    "OCR",
+    "webapp",
+    "angular",
+    "express",
+    "image",
+    "processing"
+  ],
+  "author": "Ruth Hutchins",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/rdhutchins/tessr/issues"
+  },
+  "homepage": "https://github.com/rdhutchins/tessr"
+}
