@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/rdhutchins/tessr/issues"
   },
-  "homepage": "https://github.com/rdhutchins/tessr"
+  "homepage": "https://github.com/rdhutchins/tessr",
+  "dependencies": {
+    "express": "^4.9.7"
+  }
 }
