@@ -27,5 +27,10 @@
   "homepage": "https://github.com/rdhutchins/tessr",
   "dependencies": {
     "express": "^4.9.7"
+  },
+  "devDependencies": {
+    "browser-sync": "^1.5.8",
+    "gulp": "^3.8.8",
+    "nodemon": "^1.2.1"
   }
 }
