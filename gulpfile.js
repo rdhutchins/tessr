@@ -35,17 +35,28 @@ gulp.task('server', function(done) {
   // active.
   function handleStart() {
     if (!browserSync.active) {
-      browserSync({
-        proxy: 'localhost:3000',
-        port: 5000,
-      }, done);
+      startBrowserSync(done);
+    } else {
+      stopAndStartBrowserSync();
     }
+  }
 
-    // TODO(rdhutchins): Right now it seems that browser-sync reload does
-    // nothing if the proxied server has restarted underneath it.
-    // browserSync.exit() kills everything including the gulp task.  Still
-    // looking for a way to stop and re-start browser-sync if the express server
-    // restarts.
+  // Stop browser sync and then start it.
+  function stopAndStartBrowserSync() {
+    console.log('Cleaning up previous browserSync and starting afresh.');
+    browserSync.instance.cleanup();
+    startBrowserSync();
+  }
+
+  // Start browser-sync, but save the instance so that we can clean it up later
+  // when we need to.
+  function startBrowserSync(opt_cb) {
+    browserSync.instance = browserSync.init(null, {
+      proxy: 'localhost:3000',
+      port: 5000,
+      logLevel: 'debug',
+      logConnections: true
+    }, opt_cb);
   }
 });
 
